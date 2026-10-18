@@ -54,7 +54,7 @@ function convert_upload( $upload, $context = 'upload' ) {
 	 *
 	 * @param bool   $convert Whether to convert. Default true.
 	 * @param array  $upload  The upload array (file, url, type).
-	 * @param string $context 'upload' for browser and REST uploads, 'sideload' for sideloaded files such as WP-CLI imports.
+	 * @param string $context 'upload' for form and multipart uploads; 'sideload' for files WordPress fetched or received as a raw body (raw REST uploads, URL imports, WP-CLI).
 	 */
 	if ( ! apply_filters( 'thisismyurl_bmp_to_png_convert', true, $upload, $context ) ) {
 		return $upload;
@@ -81,7 +81,7 @@ function convert_upload( $upload, $context = 'upload' ) {
 
 	$upload['file'] = $saved['path'];
 	$upload['url']  = trailingslashit( dirname( $upload['url'] ) ) . wp_basename( $saved['path'] );
-	$upload['type'] = 'image/png';
+	$upload['type'] = ! empty( $saved['mime-type'] ) ? $saved['mime-type'] : 'image/png';
 
 	return $upload;
 }

@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin Name:       Thisismyurl BMP to PNG
+ * Plugin URI:        https://plugins.thisismyurl.com/thisismyurl-bmp-to-png/
  * Description:       Converts BMP images to PNG as they are uploaded to the Media Library. No settings, no external services.
  * Version:           1.6291
  * Requires at least: 6.7

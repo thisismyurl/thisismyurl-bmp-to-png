@@ -37,7 +37,7 @@ To skip conversion for a particular upload, return false from the `thisismyurl_b
 
 == Installation ==
 
-1. Upload the plugin folder to `/wp-content/plugins/`, or install it from Plugins > Add New.
+1. Upload the plugin folder to `/wp-content/plugins/`, or use Plugins > Add New Plugin > Upload Plugin.
 2. Activate the plugin.
 3. Upload a BMP. It is converted to PNG automatically.
 
